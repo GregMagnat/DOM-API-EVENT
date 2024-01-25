@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Movie Search</title>
+    <style>
+        .movie-card {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .movie-card.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
 </head>
 <body>
-    <script src="script.js"></script>
+
+<div class="container mt-5">
+    <form id="searchForm">
+        <div class="form-group">
+            <label for="searchInput">Rechercher un film :</label>
+            <input type="text" class="form-control" id="searchInput" placeholder="Nom du film">
+        </div>
+        <button type="submit" class="btn btn-primary">Rechercher</button>
+    </form>
+
+    <div id="moviesContainer" class="mt-5"></div>
+</div>
+
+<!-- Toutes mes JS, Jquery .. -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script src="app.js"></script>
+
 </body>
 </html>
