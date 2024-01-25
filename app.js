@@ -1,4 +1,4 @@
-import config from './config';
+import config from './config.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const apiKey = config.apiKey;
@@ -106,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>Date de sortie: ${movieDetails.Released}</p>
         `;
 
-        // Afficher la modal
         $('#movieModal').modal('show');
     }
 });
