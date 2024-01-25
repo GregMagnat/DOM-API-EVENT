@@ -1,5 +1,7 @@
+import config from './config';
+
 document.addEventListener('DOMContentLoaded', () => {
-    const apiKey = '357b9233'; // Remplace par ta clé API OMDb
+    const apiKey = config.apiKey;
 
     const searchForm = document.getElementById('searchForm');
     const moviesContainer = document.getElementById('moviesContainer');
